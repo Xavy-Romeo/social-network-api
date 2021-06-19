@@ -2,7 +2,12 @@
   "name": "y",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.14"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -16,9 +21,5 @@
   "bugs": {
     "url": "https://github.com/Xavy-Romeo/social-network-api/issues"
   },
-  "homepage": "https://github.com/Xavy-Romeo/social-network-api#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.12.14"
-  }
+  "homepage": "https://github.com/Xavy-Romeo/social-network-api#readme"
 }

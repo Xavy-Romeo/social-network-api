@@ -5,13 +5,9 @@ const userController = {
     getAllUsers(req, res) {
         User
             .find({})
-            .populate({
-                path: 'thoughts',
-                select: '-__v'
-            })
             .lean().populate({
                 path: 'friends',
-                select: 'username email'
+                select: 'username'
             })
             .select('-__v')
             .then(dbUserData => res.json(dbUserData))
@@ -25,13 +21,9 @@ const userController = {
     getUserById({params}, res) {
         User
             .findOne({_id: params.id})
-            .populate({
-                path: 'thoughts',
-                select: '-__v'
-            })
             .lean().populate({
                 path: 'friends',
-                select: 'username email'
+                select: 'username'
             })
             .select('-__v')
             .then(dbUserData => {
